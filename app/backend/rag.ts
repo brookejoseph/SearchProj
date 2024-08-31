@@ -9,7 +9,7 @@ import { ChatPromptTemplate } from '@langchain/core/prompts';
 export async function webSearch(query: string) {
     console.log('Query within webSearch:', query);
   const retriever = new TavilySearchAPIRetriever({
-    apiKey: "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",
+
     k: 3, 
   });
   const webDocuments = await retriever.invoke(query);
@@ -25,7 +25,7 @@ export async function webSearch(query: string) {
 
 export async function generateAnswer(question: string, contents: string[]) {
   const model = new ChatOpenAI({
-    apiKey: "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",
+
     model: 'gpt-4o-mini',
     temperature: 0,
   });
